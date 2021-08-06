@@ -22,5 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/classes',ClassesController::class);
-Route::resource('/streams',StreamController::class);
+Route::resource('classes',ClassesController::class);
+Route::resource('streams',StreamController::class);
