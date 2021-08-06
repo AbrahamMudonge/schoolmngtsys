@@ -1,11 +1,11 @@
- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+ <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <i ><img src="{{ asset('assets/img/zalego.png') }}" width="50" height="50" alt=""></i>
         </div>
-        <div class="sidebar-brand-text mx-3">zalego stepwise <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">HosptMgntsys <sup>2</sup></div>
     </a>
 
     <!-- Divider -->
@@ -31,18 +31,19 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>School setting</span>
+            <span>Hospital setting</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 
                 <h6 class="collapse-header">settings:</h6>
-                <a class="collapse-item" href="#">class</a>
-                <a class="collapse-item" href="#">streams</a>
-                <a class="collapse-item" href="#">subject category</a>
+                <a class="collapse-item" href="{{ route('classes.index') }}">classes</a>
+                <a class="collapse-item" href="{{ route('streams.index') }}">Streams</a>
+                <a class="collapse-item" href="#">subject caategory</a>
                 <a class="collapse-item" href="#">subject</a>
-                <a class="collapse-item" href="#">teacher</a>
+                <a class="collapse-item" href="#">teachers</a>
                 <a class="collapse-item" href="#">students</a>
+                
             </div>
         </div>
     </li>
@@ -118,6 +119,7 @@
     </div>
 
     <!-- Sidebar Message -->
+  
     <div class="sidebar-card d-none d-lg-flex">
         <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
         <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>

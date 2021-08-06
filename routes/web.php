@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\module\ClassesController;
+use App\Http\Controllers\module\StreamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/classes',ClassesController::class);
+Route::resource('/streams',StreamController::class);
