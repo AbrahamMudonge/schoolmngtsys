@@ -1,19 +1,19 @@
- <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+ <ul class="navbar-nav  sidebar  sidebar-light bg-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i ><img src="{{ asset('assets/img/zalego.png') }}" width="50" height="50" alt=""></i>
+    <a class="sidebar-brand d-flex align-items-left justify-content-center" href="index.html">
+        <div >
+            <img src="{{ asset('assets/img/logo.jpeg') }}" class="rounded-circle" width="50" height="50" alt=""></i>
         </div>
-        <div class="sidebar-brand-text mx-3">HosptMgntsys <sup>2</sup></div>
-    </a>
+        <div class="sidebar-brand-text mx-3 text-success">Zalego ERP <sup></sup></div>
+    </a><br>
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item active ">
+        <a class="nav-link" href="{{ route('home') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -23,7 +23,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Menu
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -31,18 +31,18 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Hospital setting</span>
+            <span>School setting</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
+            <div class="bg-dark py-2 collapse-inner rounded">
                 
                 <h6 class="collapse-header">settings:</h6>
                 <a class="collapse-item" href="{{ route('classes.index') }}">classes</a>
                 <a class="collapse-item" href="{{ route('streams.index') }}">Streams</a>
-                <a class="collapse-item" href="#">subject caategory</a>
-                <a class="collapse-item" href="#">subject</a>
-                <a class="collapse-item" href="#">teachers</a>
-                <a class="collapse-item" href="#">students</a>
+                {{-- <a class="collapse-item" href="#">subject caategory</a>
+                <a class="collapse-item" href="#">subject</a> --}}
+                <a class="collapse-item" href="{{ route('teachers.index') }}">teachers</a>
+                <a class="collapse-item" href="{{ route('students.index') }}">students</a>
                 
             </div>
         </div>
